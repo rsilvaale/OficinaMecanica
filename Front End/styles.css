@@ -1,0 +1,253 @@
+:root {
+    --primary-color: #0288d1;
+    --secondary-color: #ff5722;
+    --success-color: #4caf50;
+    --bg-color: #f5f5f5;
+    --text-color: #212121;
+    --card-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #bdbdbd;
+    --input-focus: rgba(2, 136, 209, 0.3);
+    --btn-primary-bg: linear-gradient(45deg, #0288d1, #4fc3f7);
+    --btn-primary-hover: linear-gradient(45deg, #4fc3f7, #0288d1);
+    --btn-secondary-bg: linear-gradient(45deg, #ff5722, #ff8a50);
+    --btn-secondary-hover: linear-gradient(45deg, #ff8a50, #ff5722);
+    --btn-success-bg: linear-gradient(45deg, #4caf50, #66bb6a);
+    --btn-success-hover: linear-gradient(45deg, #66bb6a, #4caf50);
+    --navbar-bg: #0288d1;
+    --toast-bg: #ffffff;
+    --toast-border: #0288d1;
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.16);
+    --shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+[data-theme="dark"] {
+    --bg-color: #212121;
+    --text-color: #ffffff;
+    --card-bg: #424242;
+    --input-bg: #616161;
+    --input-border: #757575;
+    --input-focus: rgba(2, 136, 209, 0.5);
+    --btn-primary-bg: linear-gradient(45deg, #0277bd, #039be5);
+    --btn-primary-hover: linear-gradient(45deg, #039be5, #0277bd);
+    --btn-secondary-bg: linear-gradient(45deg, #f4511e, #ff7043);
+    --btn-secondary-hover: linear-gradient(45deg, #ff7043, #f4511e);
+    --btn-success-bg: linear-gradient(45deg, #43a047, #66bb6a);
+    --btn-success-hover: linear-gradient(45deg, #66bb6a, #43a047);
+    --navbar-bg: #0277bd;
+    --toast-bg: #424242;
+    --toast-border: #039be5;
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.5);
+    --shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.7);
+    --shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.navbar {
+    background: var(--navbar-bg) !important;
+    box-shadow: var(--shadow-medium);
+    transition: background 0.3s ease;
+}
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.card {
+    background: var(--card-bg);
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card:hover {
+    box-shadow: var(--shadow-dark);
+    transform: translateY(-5px);
+}
+.btn-primary {
+    background: var(--btn-primary-bg);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 500;
+    box-shadow: var(--shadow-light);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.btn-primary:hover {
+    background: var(--btn-primary-hover);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+}
+.btn-secondary {
+    background: var(--btn-secondary-bg);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 500;
+    box-shadow: var(--shadow-light);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.btn-secondary:hover {
+    background: var(--btn-secondary-hover);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+}
+.btn-success {
+    background: var(--btn-success-bg);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 500;
+    box-shadow: var(--shadow-light);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.btn-success:hover {
+    background: var(--btn-success-hover);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+}
+.form-control {
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    padding: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem var(--input-focus);
+}
+.form-control.is-invalid {
+    border-color: #d32f2f;
+}
+.invalid-feedback {
+    color: #d32f2f;
+    font-size: 0.875rem;
+}
+.toast-container {
+    z-index: 1100;
+}
+.toast {
+    background: var(--toast-bg);
+    border: 2px solid var(--toast-border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-dark);
+    min-width: 300px;
+    transition: all 0.3s ease;
+    animation: slideInRight 0.8s ease-in-out forwards;
+}
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+.toast-header {
+    background: var(--toast-bg);
+    color: var(--text-color);
+    border-bottom: 2px solid var(--toast-border);
+    transition: all 0.3s ease;
+}
+.toast-header .material-icons {
+    color: var(--secondary-color);
+}
+.modal-dialog {
+    max-width: 600px;
+    margin: 1.75rem auto;
+}
+.modal-content {
+    background: var(--card-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-dark);
+    transition: all 0.3s ease;
+}
+.material-icons {
+    vertical-align: middle;
+    margin-right: 8px;
+    transition: transform 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+.material-icons:hover {
+    transform: scale(1.2) rotate(15deg);
+    color: var(--secondary-color);
+}
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-section {
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 100px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/1920x400?text=Carro+em+Oficina') center/cover no-repeat;
+    opacity: 0.5;
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.services-section {
+    padding: 60px 0;
+    background: var(--bg-color);
+}
+.service-card {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-dark);
+}
+.service-card .material-icons {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    transition: transform 1s ease-in-out;
+}
+.service-card:hover .material-icons {
+    transform: rotate(360deg);
+}
+footer {
+    background: var(--navbar-bg);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: transform 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: var(--secondary-color);
+}
+@media (max-width: 768px) {
+    .btn-group .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .modal-dialog {
+        margin: 1rem;
+    }
+}
