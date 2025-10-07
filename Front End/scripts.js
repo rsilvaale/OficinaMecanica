@@ -51,6 +51,47 @@ window.addEventListener('focus', () => {
     // Removido document.title update
 });
 
+// Agendamento
+const appointmentForm = document.getElementById('appointmentForm');
+if (appointmentForm) {
+    appointmentForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        const form = e.target;
+        if (!form.checkValidity()) {
+            e.stopPropagation();
+            form.classList.add('was-validated');
+            showNotification('Por favor, preencha todos os campos corretamente.');
+            return;
+        }
+        const name = document.getElementById('name').value;
+        const whatsapp = document.getElementById('whatsapp').value;
+        const service = document.getElementById('service').value;
+        const date = document.getElementById('date').value;
+        const reason = document.getElementById('reason').value;
+        try {
+            const response = await fetch('http://localhost:3000/agendamentos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, whatsapp, service, date, reason })
+            });
+            const result = await response.json();
+            if (response.ok) {
+                showNotification('Agendamento enviado com sucesso!');
+                bootstrap.Modal.getInstance(document.getElementById('appointmentModal')).hide();
+                form.classList.remove('was-validated');
+                form.reset();
+            } else {
+                showNotification(result.error);
+            }
+        } catch (error) {
+            showNotification('Erro ao enviar agendamento');
+            console.error('Erro na requisição:', error);
+        }
+    });
+} else {
+    console.error('Elemento com ID "appointmentForm" não encontrado.');
+}
+
 // Contato via WhatsApp
 const whatsappForm = document.getElementById('whatsappForm');
 if (whatsappForm) {
