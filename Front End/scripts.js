@@ -91,29 +91,3 @@ if (appointmentForm) {
 } else {
     console.error('Elemento com ID "appointmentForm" não encontrado.');
 }
-
-// Contato via WhatsApp
-const whatsappForm = document.getElementById('whatsappForm');
-if (whatsappForm) {
-    whatsappForm.addEventListener('submit', async e => {
-        e.preventDefault();
-        const form = e.target;
-        if (!form.checkValidity()) {
-            e.stopPropagation();
-            form.classList.add('was-validated');
-            showNotification('Por favor, preencha todos os campos corretamente.');
-            return;
-        }
-        const name = document.getElementById('contactName').value;
-        const whatsapp = document.getElementById('contactWhatsapp').value;
-        const message = document.getElementById('contactMessage').value;
-        const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(`Mensagem de ${name} (${whatsapp}): ${message}`)}`;
-        window.open(whatsappUrl, '_blank');
-        showNotification('Mensagem enviada com sucesso!');
-        bootstrap.Modal.getInstance(document.getElementById('whatsappModal')).hide();
-        form.classList.remove('was-validated');
-        form.reset();
-    });
-} else {
-    console.error('Elemento com ID "whatsappForm" não encontrado.');
-}
