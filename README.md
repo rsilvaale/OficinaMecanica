@@ -158,7 +158,7 @@
         <img 
             alt="Mayara" 
             title="Me siga no GitHub" 
-            src="https://custom-icon-badges.demolab.com/github/followers/iammaayy?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Mayarao&logoColor=white"
+            src="https://custom-icon-badges.demolab.com/github/followers/iammaayy?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Mayara&logoColor=white"
         />
     </a>
 </p>
