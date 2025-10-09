@@ -128,30 +128,37 @@
     </a>
     <a href="https://github.com/filipiAraujo?tab=followers">
         <img 
-            alt="Luiz" 
+            alt="Filipi" 
             title="Me siga no GitHub" 
             src="https://custom-icon-badges.demolab.com/github/followers/filipiAraujo?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Filipi&logoColor=white"
         />
     </a>
     <a href="https://github.com/igor060silva-cyber?tab=followers">
         <img 
-            alt="Luiz" 
+            alt="Igor" 
             title="Me siga no GitHub" 
             src="https://custom-icon-badges.demolab.com/github/followers/igor060silva-cyber?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Igor&logoColor=white"
         />
     </a>
     <a href="https://github.com/fehagts?tab=followers">
         <img 
-            alt="Luiz" 
+            alt="felipe" 
             title="Me siga no GitHub" 
             src="https://custom-icon-badges.demolab.com/github/followers/fehagts?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=felipe&logoColor=white"
         />
     </a>
     <a href="https://github.com/Guoliver93?tab=followers">
         <img 
-            alt="Luiz" 
+            alt="Gustavo" 
             title="Me siga no GitHub" 
             src="https://custom-icon-badges.demolab.com/github/followers/Guoliver93?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Gustavo&logoColor=white"
+        />
+    </a>
+    <a href="https://github.com/iammaayy?tab=followers">
+        <img 
+            alt="Mayara" 
+            title="Me siga no GitHub" 
+            src="https://custom-icon-badges.demolab.com/github/followers/iammaayy?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Mayara&logoColor=white"
         />
     </a>
 </p>
